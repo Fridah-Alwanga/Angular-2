@@ -63,7 +63,6 @@ export class SearchUserService {
     let promise = new Promise((resolve, reject) => {
       this.http.get<apiResponse>(url).toPromise().then(response => {
         // this.userRepo = response
-        console.log(response)
         resolve()
 
       }, error => {
