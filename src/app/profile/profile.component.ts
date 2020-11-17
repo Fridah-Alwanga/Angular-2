@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 import { SearchUserService } from '../searchuserservice';
-// import { ProfileService } from '../profile.service';
+
 import { Repositories } from '../repositories';
 import { User } from '../user';
 
