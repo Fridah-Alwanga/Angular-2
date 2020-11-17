@@ -18,7 +18,7 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     ProfileComponent,
     SearchFormComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
