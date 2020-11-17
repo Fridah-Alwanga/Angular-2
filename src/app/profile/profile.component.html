@@ -1,8 +1,7 @@
-<br>
-
+<hr>
 <div class="container">
   <app-search-form (searchProf)="searchUser($event)"></app-search-form>
-  <hr/>
+  <hr />
   <div class="row">
     <div class="col-sm">
       <div class="testimonial-card">
@@ -46,13 +45,16 @@
   <div class="row" *ngFor="let repo of userRepo">
     <div class="col pt-3">
       <div class="card card-cascade wider reverse mt-3 repo">
-        <div class="card-body card-body-cascade text-center">
+        <div class="card-body card-body-cascade text-center" appOnHover>
           <h4 class="card-title">
             <strong>{{ repo.name }}</strong>
           </h4>
           <p class="">{{ repo.description }}</p>
           <p>{{repo.created_at|dateAgo}}</p>
-
+          <span class="row ml-5 h4"
+             >Language:
+            <p class="pl-3 red-text">{{ repo.language }}</p></span
+          >
           <button type="button" class="btn btn-primary">
             <a target="_blank" class="text-white" href="{{ repo.html_url }}"
               >View Project
@@ -63,5 +65,3 @@
     </div>
   </div>
 </div>
-
-
