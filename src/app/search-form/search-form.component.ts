@@ -15,8 +15,9 @@ export class SearchFormComponent implements OnInit {
   searchTerm: string
   @Output() searchProf = new EventEmitter<any>();
 
-  searchUser() {
+  search() {
     this.searchProf.emit(this.searchTerm)
+    this.searchTerm = ""
   }
 
   constructor() { }

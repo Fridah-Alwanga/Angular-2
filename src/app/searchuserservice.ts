@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 
@@ -9,8 +10,7 @@ import { Repositories } from './repositories'
 @Injectable({
   providedIn: 'root'
 })
-export class ProfileService {
-
+export class SearchUserService {
   userProfile: User
 
   userRepo: Repositories
@@ -20,7 +20,6 @@ export class ProfileService {
 
   constructor(private http: HttpClient) {
     this.userProfile = new User('', '', 0, 0, '', '', '', '');
-    
 
   }
 
@@ -78,5 +77,4 @@ export class ProfileService {
 
 }
 
-
-
+  

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { SearchUserService } from '../search-user.service'
+import { SearchUserService } from '../searchuserservice';
+// import { ProfileService } from '../profile.service';
 import { Repositories } from '../repositories';
 import { User } from '../user';
 
@@ -15,22 +16,22 @@ export class ProfileComponent implements OnInit {
   userProfile: User
   userRepo: Repositories
 
-  constructor(private SearchUserService: SearchUserService) {
+  constructor(private SearchUserService : SearchUserService ) {
  
   }
 
   searchUser(user) {
 
-    this.SearchUserService.searchUser(user).then((succes) => {
-      this.userProfile = this.SearchUserService.userProfile;
+    this.SearchUserService .searchUser(user).then((succes) => {
+      this.userProfile = this.SearchUserService .userProfile;
     },
       (error) => {
         console.log(error)
       }
     )
 
-    this.SearchUserService.displayRepos(user).then((succes) => {
-      this.userRepo = this.SearchUserService.userRepo;
+    this.SearchUserService .displayRepos(user).then((succes) => {
+      this.userRepo = this.SearchUserService .userRepo;
     },
       (error) => {
         console.log(error)
@@ -44,5 +45,4 @@ export class ProfileComponent implements OnInit {
     this.searchUser('Fridah-Alwanga');
   }
 }
-
 
