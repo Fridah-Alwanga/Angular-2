@@ -6,15 +6,8 @@
     <div class="col-sm">
       <div class="testimonial-card">
         <div class="avatar pt-3" style="z-index: 4">
-          <img
-            src="{{ userProfile.avatar_url }}"
-            class="width-full border bg-white" style="border-radius: 23em;"
-            alt="woman avatar"
-            style="height: auto"
-            alt
-            width="260"
-            height="260"
-          />
+          <img src="{{ userProfile.avatar_url }}" class="width-full border bg-white" style="border-radius: 23em;"
+            alt="woman avatar" style="height: auto" alt width="260" height="260" />
         </div>
       </div>
     </div>
@@ -43,8 +36,8 @@
   <h3 class="text-center">Repositories</h3>
 
 
-  <!-- <div *ngFor="let repo of userRepo"> -->
-    <!-- <div class="row" >
+
+  <!-- <div class="row" >
       <div class="col pt-3">
         <div class="card card-cascade wider reverse mt-3 repo">
           <div class="card-body card-body-cascade text-center" appOnHover>
@@ -70,16 +63,26 @@
       </div>
     </div>
 
-  </div> -->
+  </div>
 
-  
+   -->
 
   <div *ngFor="let repo of userRepo">
-    <div class="jumbotron" appOnHover>
-    <h2>{{ repo.name }}</h2>
+    <div class="jumbotron" >
+      <div class="card" style="text-align: center;">
+
+        <div class="card-body " appHighlight>
+          <h5 class="card-title">{{ repo.name }}</h5>
+          <p class="card-text">{{ repo.description }}</p>
+          <p class="card-text">{{ repo.language }}</p>
+          <a href="{{ repo.html_url }}" class="btn btn-primary">View on Github</a>
+          <p class="card-footer">{{ repo.created_at|dateAgo }}</p>
+        </div>
+      </div>
+      <!-- <h2>{{ repo.name }}</h2>
     <p>{{ repo.description }}</p>
     <p>{{ repo.language }}</p>
-    <p>{{ repo.created_at|date }}</p>
-  </div>
+    <p>{{ repo.created_at|dateAgo }}</p> -->
+    </div>
   </div>
 </div>

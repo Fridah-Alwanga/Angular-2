@@ -10,6 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { from } from 'rxjs';
 import { AboutComponent } from './about/about.component';
+import { HighlightDirective } from './highlight.directive';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { AboutComponent } from './about/about.component';
     ProfileComponent,
     SearchFormComponent,
     AboutComponent,
+    HighlightDirective,
+    DateAgoPipe,
   ],
   imports: [
     BrowserModule,
